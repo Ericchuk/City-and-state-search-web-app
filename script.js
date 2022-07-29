@@ -8,10 +8,10 @@ async function seekInfo(){
     
     let response = await fetch(api);
     let data = await response.json();
-    cities.push(...data);
+    cities.push(data);
     
     for(let i = 0; i < data.length; i++){
-    //  console.log(data[i].city, data[i].state);
+     console.log(data[i].city, data[i].state);
      function check(){
         if(data.city.match(regex) || data.state.match(regex)){
             console.log(data[i].city)
